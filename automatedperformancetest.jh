@@ -1,0 +1,43 @@
+
+entity TestResult {
+	pageLoad Float,
+    timeToInteractive Float,
+    createdBy Long,
+    createdOn LocalDate,
+    updatedBy Long,
+    updatedOn LocalDate
+}
+
+entity Build {
+	branch String,
+    tag String,
+    createdBy Long,
+    createdOn LocalDate,
+    updatedBy Long,
+    updatedOn LocalDate
+}
+
+
+relationship OneToMany {
+    Build{result} to TestResult{build}
+}
+
+application {
+  config {
+    baseName AutomatedPerformanceTesting
+    applicationType monolith
+    serverPort 9001
+    devDatabaseType mysql
+    prodDatabaseType mysql
+    clientFramework react
+    clientPackageManager npm
+    authenticationType jwt
+    buildTool maven
+    enableSwaggerCodegen true
+    packageName com.reliance.jpl
+  }
+  entities *
+  dto * with mapstruct
+  paginate * with infinite-scroll
+  service all with serviceImpl
+}
