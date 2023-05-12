@@ -1,0 +1,47 @@
+{
+  "applications": ["AutomatedPerformanceTesting"],
+  "changelogDate": "20230512092324",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "test_result",
+  "fields": [
+    {
+      "fieldName": "pageLoad",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "timeToInteractive",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "createdOn",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "updatedOn",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "TestResult",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "build",
+      "otherEntityRelationshipName": "result",
+      "relationshipName": "build",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

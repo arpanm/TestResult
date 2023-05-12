@@ -1,0 +1,30 @@
+{
+  "automatedPerformanceTestingApp": {
+    "build": {
+      "home": {
+        "title": "Builds",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Build",
+        "createOrEditLabel": "Create or edit a Build",
+        "notFound": "No Builds found"
+      },
+      "created": "A new Build is created with identifier {{ param }}",
+      "updated": "A Build is updated with identifier {{ param }}",
+      "deleted": "A Build is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Build {{ id }}?"
+      },
+      "detail": {
+        "title": "Build"
+      },
+      "id": "ID",
+      "branch": "Branch",
+      "tag": "Tag",
+      "createdBy": "Created By",
+      "createdOn": "Created On",
+      "updatedBy": "Updated By",
+      "updatedOn": "Updated On",
+      "result": "Result"
+    }
+  }
+}
